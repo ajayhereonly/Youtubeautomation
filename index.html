@@ -103,16 +103,16 @@
           </article>
           <article class="checkout-panel" id="franchise-checkout">
             <div class="eyebrow">Franchise enquiry checkout</div><h3>Start your application</h3>
-            <p>Share your details and preferred payment channel. This is an enquiry preview, not a paid booking.</p>
+            <p>Share your details and preferred payment channel. Paytm will be the payment gateway once merchant setup is complete. This is currently an enquiry preview, not a paid booking.</p>
             <form id="franchiseForm">
               <label for="frName">Full name</label><input id="frName" name="name" autocomplete="name" required placeholder="Your full name">
               <label for="frPhone">Mobile number</label><input id="frPhone" name="phone" type="tel" inputmode="tel" required pattern="[0-9+() -]{8,18}" placeholder="Your contact number">
               <label for="frCity">City / preferred outlet location</label><input id="frCity" name="city" required placeholder="Where do you plan to open?">
               <label for="frType">Preferred outlet format</label><select id="frType" name="format" required><option value="">Choose an outlet format</option><option>Takeaway / kiosk</option><option>Quick-service restaurant</option><option>Full-service restaurant</option></select>
-              <label>Preferred payment method (for future payment)</label>
-              <div class="payment-options"><label class="payment-option"><input type="radio" name="payment" value="UPI" required> UPI</label><label class="payment-option"><input type="radio" name="payment" value="Debit / Credit Card"> Debit / Credit Card</label><label class="payment-option"><input type="radio" name="payment" value="Net Banking"> Net Banking</label><label class="payment-option"><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label></div>
-              <div class="checkout-note"><strong>Payment not enabled yet.</strong> Franchise fee, taxes, refund terms and official bank/payment details must first be confirmed by the business. Do not transfer money to an unverified account.</div>
-              <button class="checkout-button" type="submit" disabled>Online payment setup pending</button>
+              <label>Payment gateway</label>
+              <div class="payment-options"><label class="payment-option"><input type="radio" name="payment" value="Paytm" required> Paytm Checkout</label><label class="payment-option">UPI, cards & net banking via Paytm</label></div>
+              <div class="checkout-note"><strong>Paytm integration pending.</strong> Online payment will be enabled after Paytm Merchant onboarding, server-side credentials, and confirmation of the franchise fee, taxes and refund terms. No payment is being collected yet.</div>
+              <button class="checkout-button" type="submit" disabled>Paytm checkout setup pending</button>
               <div class="form-message" id="franchiseMessage" role="status"></div>
             </form>
           </article>
@@ -129,7 +129,7 @@
       event.preventDefault();
       const message=document.getElementById("franchiseMessage");
       message.style.display="block";
-      message.textContent="Your details have been checked in this browser only. No application has been sent and no payment has been taken. Contact the business owner to submit the enquiry and receive verified franchise terms.";
+      message.textContent="Your details have been checked in this browser only. No application has been sent and no payment has been taken. Paytm checkout is not active until merchant credentials and the approved franchise fee are configured.";
     });
   </script>
 </body>
