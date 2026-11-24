@@ -22,7 +22,8 @@
     .experience{padding:82px 0}.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.experience-card{text-align:center;padding:28px 22px;border:1px solid var(--line);background:#fffdf8}.experience-card .number{font:700 2.2rem "Playfair Display";color:var(--gold)}.experience-card h3{font:700 1.2rem "Playfair Display";margin:8px 0}.experience-card p{color:var(--muted);font-size:.9rem;margin:0}
     .visit{background:var(--green);color:#fff8ec;padding:65px 0}.visit-inner{display:flex;justify-content:space-between;align-items:center;gap:30px}.visit h2{font:700 clamp(2rem,4vw,3rem) "Playfair Display";margin:8px 0}.visit p{color:#e2e7d9;margin:0;max-width:620px}.visit .eyebrow{color:#e6c27c}
     footer{background:var(--ink);color:#e9dac8;padding:28px 0}.footer{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;font-size:.82rem}.footer small{color:#bba995}.footer a{color:#e6b66b}
-    @media(max-width:800px){.links{gap:14px}.hero{grid-template-columns:1fr}.hero-copy{padding:70px 35px}.hero-image{min-height:360px}.menu-grid{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}.story-image{min-height:320px}.visit-inner{display:block}.visit .btn{margin-top:22px}}
+    .franchise{background:#f4ead9;padding:82px 0}.franchise-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}.franchise-panel,.checkout-panel{background:#fffdf8;border:1px solid var(--line);padding:30px}.franchise-panel h3,.checkout-panel h3{font:700 1.5rem "Playfair Display";margin:8px 0 14px}.franchise-panel p,.checkout-panel p,.franchise-panel li{color:var(--muted);font-size:.92rem}.franchise-panel ul{padding-left:20px}.franchise-panel li{margin:8px 0}.franchise-cta{display:inline-flex;background:var(--red);color:#fff;padding:13px 19px;font-weight:700;margin-top:12px}.checkout-panel label{display:block;font-size:.84rem;font-weight:700;margin:13px 0 5px}.checkout-panel input,.checkout-panel select{width:100%;padding:12px;border:1px solid var(--line);background:#fff;font:inherit;border-radius:2px}.payment-options{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:10px 0}.payment-option{border:1px solid var(--line);padding:10px;font-size:.85rem;background:#fff}.checkout-note{background:#f7edda;border-left:3px solid var(--gold);padding:12px;margin-top:15px;color:var(--muted);font-size:.82rem}.checkout-button{width:100%;border:0;background:#b7a99a;color:#fff;padding:14px;font:700 .9rem "DM Sans";margin-top:15px;cursor:not-allowed}.form-message{display:none;margin-top:12px;padding:12px;background:#edf2e8;color:#34472d;font-size:.88rem}
+    @media(max-width:800px){.franchise-grid{grid-template-columns:1fr}.links{gap:14px}.links{gap:14px}.hero{grid-template-columns:1fr}.hero-copy{padding:70px 35px}.hero-image{min-height:360px}.menu-grid{grid-template-columns:repeat(2,1fr)}.story{grid-template-columns:1fr}.story-image{min-height:320px}.visit-inner{display:block}.visit .btn{margin-top:22px}}
     @media(max-width:540px){.wrap{width:calc(100% - 30px)}.nav{height:72px}.links a:not(.nav-cta){display:none}.brand{font-size:1.08rem}.hero-copy{padding:62px 23px}.hero h1{font-size:3.5rem}.hero-image{min-height:285px}.intro{padding:65px 0 50px}.values{grid-template-columns:1fr;margin-bottom:55px}.value+.value{border-left:0;border-top:1px solid var(--line)}.menu-grid,.experience-grid{grid-template-columns:1fr}.dish-image{height:220px}.story-image{min-height:250px}.story-copy{padding:42px 25px}.experience{padding:55px 0}.footer{display:block}.footer small{display:block;margin-top:7px}}
   </style>
 </head>
@@ -31,7 +32,7 @@
   <header>
     <div class="wrap nav">
       <a class="logo" href="#home"><span class="seal">DK</span><span class="brand">Dadiya Kathiyawadi<small>A taste of Saurashtra</small></span></a>
-      <nav class="links" aria-label="Main navigation"><a href="#story">Our Story</a><a href="#menu">The Menu</a><a href="#experience">Our Promise</a><a class="nav-cta" href="#visit">Visit Us</a></nav>
+      <nav class="links" aria-label="Main navigation"><a href="#story">Our Story</a><a href="#menu">The Menu</a><a href="#experience">Our Promise</a><a href="#franchise">Franchise</a><a class="nav-cta" href="#visit">Visit Us</a></nav>
     </div>
   </header>
   <main id="home">
@@ -83,9 +84,53 @@
       </div>
     </section>
 
+    <section class="franchise" id="franchise">
+      <div class="wrap">
+        <div class="section-heading"><div class="eyebrow">Grow with Dadiya Kathiyawadi</div><h2 class="section-title">Bring Kathiyawadi hospitality to your city.</h2><p>Explore a franchise opportunity and review the proposed support areas before submitting an enquiry.</p></div>
+        <div class="franchise-grid">
+          <article class="franchise-panel">
+            <div class="eyebrow">Franchise opportunity</div><h3>What a franchise package may include</h3>
+            <p>The final package, commercial terms and responsibilities will be confirmed in a written franchise agreement.</p>
+            <ul>
+              <li>Brand name and approved brand-use guidelines</li>
+              <li>Menu guidance, recipes and food preparation standards</li>
+              <li>Outlet layout, kitchen setup and equipment planning guidance</li>
+              <li>Staff training and operating procedures</li>
+              <li>Launch planning and initial marketing material guidance</li>
+              <li>Ongoing operational guidance, subject to the agreement</li>
+            </ul>
+            <a class="franchise-cta" href="#franchise-checkout">Apply for a franchise</a>
+          </article>
+          <article class="checkout-panel" id="franchise-checkout">
+            <div class="eyebrow">Franchise enquiry checkout</div><h3>Start your application</h3>
+            <p>Share your details and preferred payment channel. This is an enquiry preview, not a paid booking.</p>
+            <form id="franchiseForm">
+              <label for="frName">Full name</label><input id="frName" name="name" autocomplete="name" required placeholder="Your full name">
+              <label for="frPhone">Mobile number</label><input id="frPhone" name="phone" type="tel" inputmode="tel" required pattern="[0-9+() -]{8,18}" placeholder="Your contact number">
+              <label for="frCity">City / preferred outlet location</label><input id="frCity" name="city" required placeholder="Where do you plan to open?">
+              <label for="frType">Preferred outlet format</label><select id="frType" name="format" required><option value="">Choose an outlet format</option><option>Takeaway / kiosk</option><option>Quick-service restaurant</option><option>Full-service restaurant</option></select>
+              <label>Preferred payment method (for future payment)</label>
+              <div class="payment-options"><label class="payment-option"><input type="radio" name="payment" value="UPI" required> UPI</label><label class="payment-option"><input type="radio" name="payment" value="Debit / Credit Card"> Debit / Credit Card</label><label class="payment-option"><input type="radio" name="payment" value="Net Banking"> Net Banking</label><label class="payment-option"><input type="radio" name="payment" value="Bank Transfer"> Bank Transfer</label></div>
+              <div class="checkout-note"><strong>Payment not enabled yet.</strong> Franchise fee, taxes, refund terms and official bank/payment details must first be confirmed by the business. Do not transfer money to an unverified account.</div>
+              <button class="checkout-button" type="submit" disabled>Online payment setup pending</button>
+              <div class="form-message" id="franchiseMessage" role="status"></div>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="visit" id="visit"><div class="wrap visit-inner"><div><div class="eyebrow">Dadiya Kathiyawadi</div><h2>Come hungry. Leave happy.</h2><p>We look forward to welcoming you. Visit details, contact information and current menu can be added here once the business details are confirmed.</p></div><a class="btn primary" href="#menu">View food highlights</a></div></section>
   </main>
   <footer><div class="wrap footer"><span><strong>Dadiya Kathiyawadi</strong> · A taste of Saurashtra</span><small>© <span id="year"></span> Dadiya Kathiyawadi. All rights reserved.</small><a href="#home">Back to top ↑</a></div></footer>
-  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent=new Date().getFullYear();
+    document.getElementById("franchiseForm").addEventListener("submit",function(event){
+      event.preventDefault();
+      const message=document.getElementById("franchiseMessage");
+      message.style.display="block";
+      message.textContent="Your details have been checked in this browser only. No application has been sent and no payment has been taken. Contact the business owner to submit the enquiry and receive verified franchise terms.";
+    });
+  </script>
 </body>
 </html>
